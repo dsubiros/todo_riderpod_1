@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:todo_riderpod_1/src/pages/home_page.dart';
+import 'package:todo_riderpod_1/src/pages/uhc_home_page.dart';
+import 'package:todo_riderpod_1/src/walmart/pages/walmart_account_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,7 +33,12 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
-      ),
+      ).copyWith(
+          cardTheme: Theme.of(context)
+              .cardTheme
+              .copyWith(color: Colors.white, elevation: 5)),
+      // home: const UhcHomePage(),
+      // home: const WalmartAccountPage(),
       home: const HomePage(),
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
